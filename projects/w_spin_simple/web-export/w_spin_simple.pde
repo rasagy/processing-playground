@@ -7,7 +7,7 @@
 
 float rad, r, x1, y1, x2, y2;
 float n=0, baseHue=random(50);
-boolean mod=false, mirror = true, interact=false;
+boolean mod=false, mirror = false, interact=false;
 
 void setup() {
   size(500, 500);

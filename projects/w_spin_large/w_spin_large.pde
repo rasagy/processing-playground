@@ -14,7 +14,7 @@ void setup() {
   size(800, 800);
   colorMode(HSB, 100);
   background(200);
-  rad=-PI/2;    r=width/4; 
+  rad=-PI/2;    r=width/4;
   x1=0;  y1=0;  x2=0;  y2=0; 
   n=random(5);
   strokeWeight(2);
