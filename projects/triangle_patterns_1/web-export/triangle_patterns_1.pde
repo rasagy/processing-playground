@@ -1,4 +1,10 @@
-//
+//Triangle Patterns
+//Create triangles with one vertex using mouse coords()
+//Press mouse & drag to create triangles
+//Click on top bar to cycle colors (vary mouseX for Hue)
+//Press 'R' for clearing (& choosing random color)
+//Press 'Space' for a screenshot
+//Created by @rasagy
 
 color myColor;
 
@@ -12,7 +18,7 @@ void draw() {
   if (mousePressed && mouseY>10) {
     //background(250,250,250,10);
     beginShape();
-    fill(myColor,8);
+    fill(myColor,5);
     noStroke();
     vertex(width/4, height/2);
     vertex(width*3/4, height/2);
