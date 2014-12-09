@@ -7,6 +7,7 @@
 //Created by @rasagy
 
 color myColor;
+boolean hit_edge=false;
 
 void setup() {
   size(600, 500);
@@ -15,15 +16,20 @@ void setup() {
   randomizeColor(random(100));
 }
 void draw() { 
-  if (mousePressed && mouseY>10) {
-    //background(250,250,250,10);
-    beginShape();
-    fill(myColor,5);
-    noStroke();
-    vertex(width/4, height/2);
-    vertex(width*3/4, height/2);
-    vertex(mouseX, mouseY);
-    endShape();
+  if (mousePressed && !hit_edge) {
+    if (mouseX>0 && mouseX<width && mouseY>_getUiHeight() && mouseY<height) {
+      //background(250,250,250,10);
+      beginShape();
+      fill(myColor, 5);
+      noStroke();
+      vertex(width/4, height/2);
+      vertex(width*3/4, height/2);
+      vertex(mouseX, mouseY);
+      endShape();
+    } else {
+      hit_edge=true;
+      println(hit_edge);
+    }
   }
 }
 
@@ -31,23 +37,29 @@ void randomizeColor(float hue) {
   myColor=color(random(5)+hue, random(30)+60, random(20)+70);  
   strokeWeight(10);
   stroke(myColor);
-  line(0,5,width,5);
+  int uiHeight = _getUiHeight();
+  rect(0, 0, width, uiHeight);
 }
 
 void mousePressed() {
   //  setup();
-  if(mouseY<10)
-    randomizeColor(map(mouseX,0,width,0,100));
+  hit_edge=false;
+  if (mouseY<10)
+    randomizeColor(map(mouseX, 0, width, 0, 100));
 }
 
 void keyPressed() {
   if (key == ' ')
   {
     saveFrame("/print/prism"+int(random(100))+".png");
-//    setup();
+    //    setup();
   } else if (key == 'r' || key == 'R')
   {  
     setup();
   }
+}
+
+int _getUiHeight() {
+  return 10;
 }
 
