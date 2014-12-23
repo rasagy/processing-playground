@@ -4,6 +4,10 @@ Processing Playground
 List of all the projects:
 
 ___
+[![ thumb](http://rasagy.github.io/processing-playground/images/thumbs/th-Paper-1.jpg)](http://rasagy.github.io/processing-playground/projects/paper_gradient_shapes/web-export/)
+####[Gradient Shapes on Paper](http://rasagy.github.io/processing-playground/projects/paper_gradient_shapes/web-export/)
+_Single Hue gradients along with a paper-like texture._
+___
 [![ thumb](http://rasagy.github.io/processing-playground/images/thumbs/th-Spin-1.jpg)](http://rasagy.github.io/processing-playground/projects/w_spin_simple/web-export/)
 ####[Spinning Wave](http://rasagy.github.io/processing-playground/projects/w_spin_simple/web-export/)
 _Simple drawing algorithm that draws radial patterns._
